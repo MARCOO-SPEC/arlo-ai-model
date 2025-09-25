@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>A.R.L.O — AI Voice Interface</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='jarvis.css') }}">
+</head>
+<body>
+  <div class="app-root">
+    <div class="bg-grid"></div>
+    <div class="bg-orb orb-left"></div>
+    <div class="bg-orb orb-right"></div>
+      
+  
+
+    <header class="topbar">
+      <div class="logo-and-title">
+        <div class="ai-logo" id="aiLogo" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#3b82f6"/>
+                <stop offset="0.5" stop-color="#8b5cf6"/>
+                <stop offset="1" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+            <circle cx="12" cy="12" r="10" stroke="url(#g1)" stroke-width="1.6" fill="rgba(255,255,255,0.02)"/>
+            <path d="M8 12c0-2 2-4 4-4s4 2 4 4v2" stroke="url(#g1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="10" r="0.8" fill="url(#g1)"/>
+            <circle cx="15" cy="10" r="0.8" fill="url(#g1)"/>
+          </svg>
+        </div>
+        <h1 class="title">A.R.L.O</h1>
+      </div>
+
+      <button id="modeToggle" class="mode-toggle">
+        <span id="modeIcon">💬</span> 
+        <span id="modeLabel">Text Mode</span>
+      </button>
+    </header>
+
+    <main class="main-content">
+      <!-- Left Sidebar with Voice Controls -->
+      <aside class="voice-sidebar" id="voiceSection">
+        <div class="voice-section">
+          <button id="voiceBtn" class="voice-button" aria-pressed="false" title="Click to start/stop listening">
+            <div class="wave-container" aria-hidden="true">
+              <span class="bar b1"></span>
+              <span class="bar b2"></span>
+              <span class="bar b3"></span>
+              <span class="bar b4"></span>
+              <span class="bar b5"></span>
+            </div>
+          </button>
+          <p id="voiceHint" class="hint">Click to start voice input</p>
+        </div>
+
+        <div class="status-indicators">
+          <div class="status-item">
+            <span class="status-dot"></span>
+            <span>AI Online</span>
+          </div>
+          <div class="status-item">
+            <span class="status-dot"></span>
+            <span>Voice Ready</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Central Chat Area -->
+      <section class="chat-area">
+        <div class="console-wrap">
+          <div class="console-header">
+            <div class="traffic">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="console-title">AI Brain Console</span>
+          </div>
+
+          <div id="consoleOutput" class="console-output" aria-live="polite"></div>
+        </div>
+
+        <!-- Text Input Section -->
+        <div class="text-controls">
+          <div id="textSection" class="text-section hidden">
+            <form id="textForm">
+              <input id="textField" type="text" maxlength="500" placeholder="Type your message to ARLO..." autocomplete="off" />
+              <button type="submit" class="send-btn">➤</button>
+            </form>
+
+            <div class="suggestions">
+              <button class="suggestion">Hello ARLO</button>
+              <button class="suggestion">What can you do?</button>
+              <button class="suggestion">Tell me a joke</button>
+              <button class="suggestion">Open facebook.com</button>
+              <button class="suggestion">Visit twitter.com</button>
+              <button class="suggestion">Visit wikipedia</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      AI Voice Interface • Neural Network Active • Ready to Assist
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Page</title>
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      background: linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #1e093a 100%);
+      margin: 0;
+      color: #222;
+      font-size: 1.125em;
+    }
+
+    /* Title */
+    .title {
+      text-align: center;
+      color: #00ffdf;
+      font-size: 3em;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    /* Subtitle */
+    .para {
+      text-align: center;
+      font-size: 1.25em;
+      color: #00ffdf;
+      margin: 0 auto 40px;
+      max-width: 650px;
+      line-height: 1.5;
+    }
+
+    /* General Section Styling */
+    section {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 25px 30px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #228a7c;
+    }
+
+    .container1 {
+      background: #ccf7f1;
+      border: 2px solid #00bfa5;
+    }
+
+    .container2 {
+      background: #d8f0d2;
+      border: 2px solid #00bfa5;
+    }
+
+    .container3 {
+      background: #d8f0d2;
+      border: 2px solid #66bb6a;
+    }
+
+    /* Section Headings */
+    .section-heading {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #1cad9a;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* Team Title */
+    .team-title {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      color: #1cad9a;
+      font-size: 2.2em;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    /* Team Members Flex */
+    .team {
+      display: flex;
+      justify-content: space-around;
+      max-width: 900px;
+      margin: 0 auto 60px;
+      gap: 25px;
+      flex-wrap: wrap;
+      padding: 0 15px;
+    }
+
+    .member {
+      background: #e0fff9;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 191, 165, 0.3);
+      padding: 20px 25px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #1cad9a;
+      cursor: default;
+      border: 2px solid #00bfa5;
+    }
+
+    .member:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0, 191, 165, 0.5);
+    }
+
+    .member h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.5em;
+      font-weight: 700;
+      text-shadow: 0 0 5px #00ffccaa;
+      color: #1cad9a;
+    }
+
+    .member p {
+      font-size: 1em;
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* Button */
+    .button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 10px 15px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .button svg {
+      margin-right: 6px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      background: linear-gradient(135deg, #101827 0%, #14203b 60%, #250e44 100%);
+      color: #b2dfdb;
+      font-weight: 600;
+      box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .team {
+        justify-content: center;
+      }
+      .member {
+        width: 90%;
+        max-width: 350px;
+      }
+    }
+    .glow{
+      color: #1cad9a ;
+      
+      
+          text-shadow:
+        0 0 2px #1cad9a,
+        0 0 4px #1cad9a;
+        font-size: 28px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title"><u>About A.R.L.O</u></h1>
+  <p class="para">Learn more about Arlo and the masterminds behind it.</p>
+
+  <!-- Back to Home Button -->
+  <a href="index.html" class="button">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back to Home
+  </a>
+
+  <!-- Sections -->
+  <section class="container1">
+    <h2 class="section-heading">What Is Arlo?</h2>
+    <p>
+      Arlo is an advanced AI chatbot designed to assist users in various tasks,
+      from answering questions to providing recommendations. It can perform complex
+      mathematical operations and is designed to accompany you in your difficult times
+      so you don’t have to suffer alone.
+    </p>
+  </section>
+
+  <section class="container2">
+    <h2 class="section-heading">Key Features</h2>
+    <ul>
+      <li><b>Natural Language Processing:</b> Understands and responds to user queries in a human-like manner.</li>
+      <li><b>Multi-Tasking:</b> Capable of handling multiple requests simultaneously.</li>
+      <li><b>Learning Ability:</b> Continuously improves its responses based on user interactions.</li>
+      <li><b>Integration:</b> Can be integrated with various platforms and services for enhanced functionality.</li>
+      <li><b>Emotional Support:</b> Designed to provide comfort and assistance during difficult times.</li>
+      <li><b>Mathematical Proficiency:</b> Capable of performing complex mathematical calculations.</li>
+      <li><b>24/7 Availability:</b> Always ready to assist users whenever needed.</li>
+      <li><b>Customizable:</b> Users can tailor its responses and functionalities to suit their preferences.</li>
+      <li><b>Advanced Functions:</b> It performs advance functions like opening different applications such as youtube,facebook etc. it can take screenshots,tell jokes and system information.</li>
+    </ul>
+  </section>
+
+  <section class="container3">
+    <h2 class="section-heading">Our Team</h2>
+    <p>
+      Our team consists of passionate developers and designers dedicated to creating innovative solutions.
+      We believe in the power of technology to transform lives and are committed to making Arlo a reliable companion for users worldwide.
+    </p>
+  </section>
+
+  <!-- Team Members -->
+  <div class="team-title">Our Team Members</div>
+
+  <div class="team">
+    <div class="member">
+      <h3>Muhammad Aman</h3>
+      <p>Project Leader and Front-End Expert</p>
+    </div>
+    <div class="member">
+      <h3>Saba Noor</h3>
+      <p>Front-End Expert and UI Designer</p>
+    </div>
+    <div class="member">
+      <h3>Taqi</h3>
+      <p>Back-End Expert</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="glow">&copy; 2025 Arlo A.I. All rights reserved.</p>
+  </footer>
+</body>
+</html>
